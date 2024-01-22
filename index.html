@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Microsoft</title>
+    <title>Image Creator from Microsoft Designer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="icon" href="./img/avatar.png" type="image/png">
   </head>
   <body>
     <div class="Wrapper">
-      <header class="Header">
-        <div class="HeaderItem">
-          <div class="HeaderStartContainer">
-            <img src="./img/ms-logo.svg" alt="Microsoft Bing Logo">
-            <div class="HeaderSearch">
-              <img class="HeaderSearchLogo" src="./img/search.svg" alt="">
-            </div>
-            <div class="HeaderLogoContainer">
-              <div class="HeaderLogoInfo">
-                <h1 class="HeaderTitle">Image Creator</h1>
-                <p class="HeaderSubtitle">from Designer</p>
+      <main>
+        <div class="HeaderContainer">
+          <header class="Header">
+            <div class="HeaderItem">
+              <div class="HeaderStartContainer">
+                <img src="./img/ms-logo.svg" alt="Microsoft Bing Logo">
+                <div class="HeaderSearch">
+                  <img class="HeaderSearchLogo" src="./img/search.svg" alt="">
+                </div>
+                <div class="HeaderLogoContainer">
+                  <div class="HeaderLogoInfo">
+                    <h1 class="HeaderTitle">Image Creator</h1>
+                    <p class="HeaderSubtitle">from Designer</p>
+                  </div>
+                  <button class="HeaderBtn">Preview</button>
+                </div>
               </div>
-              <button class="HeaderBtn">Preview</button>
-            </div>
-          </div>
-          <div class="HeaderEndContainer">
-            <div class="HeaderEndItem">
-              <span>Alchr</span>
-              <div class="HeaderEndItem" data-color="cc-gray">
-                <img class="HeaderAvatar" src="./img/avatar.png" alt="">
+              <div class="HeaderEndContainer">
+                <div class="HeaderEndItem">
+                  <span>Alchr</span>
+                  <div class="HeaderEndItem" data-color="cc-gray">
+                    <img class="HeaderAvatar" src="./img/avatar.png" alt="">
+                  </div>
+                </div>
+                <div class="HeaderEndItem">
+                  <span>1580</span>
+                  <div class="HeaderEndItemCircle">
+                    <img class="fz-big" src="./img/medal.svg" alt="">
+                  </div>
+                </div>
+                <div class="HeaderEndItem">
+                  <span>Mobile</span>
+                  <div class="HeaderEndItemCircle">
+                    <img class="fz-big" src="./img/mobile.svg" alt="">
+                  </div>
+                </div>
+                <img class="HeaderMenu" src="./img/menu.svg" alt="">
               </div>
             </div>
-            <div class="HeaderEndItem">
-              <span>1580</span>
-              <div class="HeaderEndItemCircle">
-                <img class="fz-big" src="./img/medal.svg" alt="">
-              </div>
-            </div>
-            <div class="HeaderEndItem">
-              <span>Mobile</span>
-              <div class="HeaderEndItemCircle">
-                <img class="fz-big" src="./img/mobile.svg" alt="">
-              </div>
-            </div>
-            <img class="HeaderMenu" src="./img/menu.svg" alt="">
-          </div>
+            <section class="Prompt">
+              <form class="Form" action="#">
+                <div class="FormInputContainer">
+                  <input class="FormInput" type="text" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create">
+                  <div class="FormItem">
+                    <div class="FormItemCoin">
+                      <div class="FormItemCoinCircle">
+                        <div class="FormItemCoinInside"></div>
+                      </div>
+                      <img class="FormItemCoinIcon" src="./img/thunder.svg" alt="">
+                    </div>
+                    <p class="FormItemCoinNumber">15</p>
+                  </div>
+                </div>
+                <div class="FormButtons">
+                  <a class="FormButton">
+                    <div class="FormButtonContainer">
+                      <img src="./img/brush.svg" alt="">
+                      <span>Create</span>
+                    </div>
+                  </a>
+                  <a class="FormButton FormButton__transparent">Surprise Me</a>
+                </div>
+              </form>
+            </section>
         </div>
-        <main>
-        </main> 
-
-
+      </main> 
   </body>
 </html>

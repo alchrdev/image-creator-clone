@@ -9,10 +9,14 @@
   --clr-indigo-500: hsl(225, 82%, 49%);
   --clr-red-500: hsl(0, 100%, 39%);
   --clr-red-400: hsl(334 43% 55%);
-  --clr-orange: hsl(11 32% 45%);
+  --clr-orange-500: hsl(8, 88%, 68%);
+  --clr-orange-400: hsl(11 32% 45%);
   --clr-purple-500: hsl(326, 78%, 49%);
+  --clr-purple-400: hsl(333, 78%, 56%);
   --clr-yellow-100: hsl(41, 74%, 56%);
   --clr-yellow-50: hsl(45, 82%, 75%);
+  --gradient-coin-start: hsl(11 32% 45% / 50%) ;
+  --gradient-coin-end: hsl(334 43% 40% / 50%) ;
   --ff-default: "Roboto", sans-serif;
   --fw-normal: 400;
   --fw-medium: 500;
@@ -48,11 +52,18 @@ h1, h2, h3, p {
 
 .Wrapper {
   padding-inline: 1.53rem;
-  /* border: 2px solid red; */
+}
+
+.HeaderContainer {
+
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: var(--clr-gray-900);
 }
 
 .Header {
-  padding-block: .9rem;
+  padding-block: 1.30rem;
 }
 
 .HeaderItem{
@@ -60,7 +71,6 @@ h1, h2, h3, p {
   justify-content: space-between;
   align-items: center;
   gap: .75rem;
-  /* background-color: red; */
 }
 
 .HeaderStartContainer {
@@ -71,7 +81,6 @@ h1, h2, h3, p {
 
 .HeaderSearch {
   position: relative;
-  background-color: red;
 }
 
 .HeaderSearch::after {
@@ -127,6 +136,141 @@ h1, h2, h3, p {
 
 .HeaderEndContainer {
   display: none;
+}
+
+.Prompt {
+  padding-block: 1rem;
+}
+
+.Form {
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.FormInputContainer {
+  background-color: var(--clr-gray-700);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5rem;
+  padding-block: .55rem;
+  padding-inline-end: 1rem;
+  width: 100%;
+}
+
+.FormInput {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  padding-block: .5rem;
+  margin-inline-start: .90rem;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  color: var(--clr-gray-100);
+}
+
+.FormInputContainer:hover {
+  outline: 1px solid var(--clr-gray-300);
+  transition: outline .1s;
+}
+
+.FormInput::placeholder {
+  color: var(--clr-gray-300);
+}
+
+.FormItem {
+  display: flex;
+  align-items: center;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  gap: .4rem;
+}
+
+.FormItemCoin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  block-size: 1.2rem;
+  inline-size: 1.2rem;
+  border-radius: 50%;
+  background: linear-gradient(var(--clr-yellow-50), var(--clr-yellow-100));
+
+}
+
+.FormItemCoinCircle {
+  background: linear-gradient(var(--gradient-coin-start), var(--gradient-coin-end));
+  block-size: 1.2rem;
+  inline-size: 1.2rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FormItemCoinInside {
+  block-size: .8rem;
+  inline-size: .8rem;
+  border-radius: 50%;
+  background: linear-gradient(var(--clr-orange-500), var(--clr-red-400));
+}
+
+.FormItemCoinIcon {
+  inline-size: .7rem;
+}
+
+.FormItemCoinNumber {
+  font-size: .9rem;
+  color: var(--clr-gray-50);
+}
+
+.FormButtons {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.FormButton {
+  background-color: var(--clr-purple-500);
+  border-radius: 5rem;
+  padding: .7rem  1.53rem;
+  color: var(--clr-gray-50);
+  inline-size: max-content;
+}
+
+.FormButton:hover,
+.FormButton:focus-visible{
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid var(--clr-purple-500);
+  transition: border, background-color .5s;
+}
+
+.FormButton__transparent {
+  background-color: transparent;
+  border: 2px solid var(--clr-purple-500);
+}
+
+.FormButton__transparent:hover,
+.FormButton__transparent:focus-visible {
+  transition: border, background-color .5s;
+  background-color: var(--clr-purple-500);
+}
+
+
+.FormButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 @media (min-width: 768px){
@@ -205,5 +349,15 @@ h1, h2, h3, p {
   .HeaderEndItemCircle [class^="fz-big"]{
     inline-size: 1.8rem;
   }
+
+
+  .Form {
+    flex-wrap:  nowrap;
+  }
+
+  .FormInputContainer {
+    width: 80%;
+  }
+
 
 }
