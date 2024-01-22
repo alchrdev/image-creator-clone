@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --clr-gray-900: hsl(40, 6%, 10%);
+  --clr-gray-700: hsl(40, 3%, 23%);
+  --clr-gray-300: hsl(48, 2%, 46%);
+  --clr-gray-100: hsl(20, 2%, 75%);
+  --clr-gray-50: hsl(40, 13%, 95%);
+  --clr-indigo-500: hsl(225, 82%, 49%);
+  --clr-red-500: hsl(0, 100%, 39%);
+  --clr-red-400: hsl(334 43% 55%);
+  --clr-orange: hsl(11 32% 45%);
+  --clr-purple-500: hsl(326, 78%, 49%);
+  --clr-yellow-100: hsl(41, 74%, 56%);
+  --clr-yellow-50: hsl(45, 82%, 75%);
+  --ff-default: "Roboto", sans-serif;
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+
+html{
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  margin: 0;
+  background-color: var(--clr-gray-900);
+  font-family: var(--ff-default);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.Wrapper {
+  padding-inline: 1.53rem;
+  /* border: 2px solid red; */
+}
+
+.Header {
+  padding-block: .9rem;
+}
+
+.HeaderItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  /* background-color: red; */
+}
+
+.HeaderStartContainer {
+  display: flex;
+  align-items: center;
+  gap: .63rem;
+}
+
+.HeaderSearch {
+  position: relative;
+  background-color: red;
+}
+
+.HeaderSearch::after {
+  content: "";
+  inline-size: .10rem;
+  block-size: 1.7rem;
+  background-color: var(--clr-gray-300);
+  position: absolute;
+  top: -12px;
+  right: -1px;
+}
+
+.HeaderSearchLogo {
+  block-size: 1.5rem;
+  display: none;
+}
+
+.HeaderTitle {
+  font-size: 1.1rem;
+  letter-spacing: 0.03rem;
+}
+
+.HeaderSubtitle {
+  font-size: .7rem;
+}
+
+.HeaderLogoContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.HeaderLogoInfo {
+  color: var(--clr-gray-50);
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+
+.HeaderBtn {
+  background-color: transparent;
+  border: 1px solid var(--clr-gray-50);
+  border-radius: .3rem;
+  font-size: .55rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: .4rem;
+  padding-inline-start: .68rem;
+  padding-inline-end: .81rem;
+  color: var(--clr-gray-50);
+  text-transform: uppercase;
+  display: none;
+}
+
+.HeaderEndContainer {
+  display: none;
+}
+
+@media (min-width: 768px){
+
+  .HeaderLogoContainer {
+    margin-inline-start: 10px;
+  }
+
+  .HeaderSearch {
+    block-size: 1.9rem;
+    inline-size: 1.9rem;
+    background-color: var(--clr-gray-700);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .HeaderSearchLogo {
+    display: block;
+    block-size: .98rem;
+  }
+
+  .HeaderSearch::after {
+    top: 0;
+    right: -10px;
+  }
+
+  .HeaderTitle {
+    font-size: .99rem;
+  }
+
+  .HeaderBtn {
+    display: block;
+  }
+
+  .HeaderEndContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .HeaderEndItem {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .HeaderAvatar {
+    inline-size: 1.8rem;
+    border-radius: 50%;
+  }
+
+  .HeaderMenu {
+    margin-left: 10px;
+  }
+
+  .HeaderEndItemCircle {
+    position: relative;
+  }
+
+  .HeaderEndItemCircle::before{
+    content: "";
+    block-size: .5rem;
+    inline-size: .5rem;
+    border-radius: 50%;
+    background-color: var(--clr-red-500);
+    position: absolute;
+    inset-block-start: 0.15rem;
+    inset-inline-end: -0.50rem;
+  }
+
+  .HeaderEndItemCircle [class^="fz-big"]{
+    inline-size: 1.8rem;
+  }
+
+}
