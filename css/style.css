@@ -55,11 +55,7 @@ h1, h2, h3, p {
 }
 
 .HeaderContainer {
-
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  background-color: var(--clr-gray-900);
+  position: static;
 }
 
 .Header {
@@ -182,6 +178,7 @@ h1, h2, h3, p {
   resize: none;
 }
 
+
 .FormInputContainer:hover {
   outline: 1px solid var(--clr-gray-300);
   transition: outline .1s;
@@ -191,12 +188,45 @@ h1, h2, h3, p {
   color: var(--clr-gray-300);
 }
 
+.FormItemDivider {
+  width: 1px;
+  height: 48px;
+  background-color: var(--clr-gray-50);
+  opacity: .1;
+  position: relative;
+  top: -8px;
+  display: none;
+}
+
 .FormItem {
   display: flex;
   align-items: center;
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
   gap: .4rem;
+  position: relative;
+}
+
+.FormItemTooltipContainer{
+  background-color: var(--clr-gray-700);
+  min-width: 385px;
+  position: absolute;
+  font-size: .9rem;
+  top: 55px;
+  right: 0;
+  padding: .8rem;
+  color: var(--clr-gray-50);
+  border-radius: .5rem;
+}
+
+.FormItemTooltip {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background-color: var(--clr-gray-700);
+  right: 15px;
+  top: -8px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
 .FormItem__desktop {
@@ -292,7 +322,125 @@ h1, h2, h3, p {
   display: none;
 }
 
+.ExploreHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ExploreTitle {
+  display: flex;
+  gap: 2rem;
+}
+
+.ExploreTitle a {
+  color: var(--clr-gray-50);
+  text-decoration: none;
+}
+
+.ExploreHelp {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  color: var(--clr-gray-50);
+}
+
+.ExploreBorderBottom {
+  background: linear-gradient(272.21deg,#e63887 36.73%,#f78560 96.93%);
+  color: transparent;
+  height: 3px;
+  margin-top: 5px;
+}
+
+.GalleryImageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.GalleryImageResults {
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-gap: 13px;
+  padding-block-start: 16px;
+  padding-inline: 0;
+  margin-bottom: 25px;
+}
+
+
+.ImageCount {
+  position: relative;
+  transition: all 4.s ease 0s;
+  text-align: center;
+}
+
+.ImageContText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ImageContainer img {
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: 100%;
+}
+
+.ImageContText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.ImageText {
+  color: var(--clr-gray-50);
+  display: none;
+}
+
+.ImageContainer {
+    -webkit-animation: fadein 8s, 2s ease-out 0s 1 slideInFromBottom;
+    -moz-animation: fadein 8s,2s ease-out 0s 1 slideInFromBottom;
+    -ms-animation: fadein 8s,2s ease-out 0s 1 slideInFromBottom;
+    -o-animation: fadein 8s,2s ease-out 0s 1 slideInFromBottom;
+    animation: fadein 8s, 2s ease-out 0s 1 slideInFromBottom;
+}
+
+.ImageContainer:focus-visible .ImageContText, .ImageContainer:hover .ImageContText {
+    transition: all .4s ease 0s;
+    background: rgba(0,0,0,.65);
+}
+
+.ImageContainer:focus-visible .ImageText, .ImageContainer:hover .ImageText {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    position: relative;
+    font-family: "Roboto",Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 17px;
+}
+
 @media (min-width: 768px){
+
+  .HeaderContainer {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: var(--clr-gray-900);
+  }
 
   .HeaderLogoContainer {
     margin-inline-start: 10px;
@@ -388,7 +536,20 @@ h1, h2, h3, p {
 
   .FormItem__desktop {
     display: flex;
+
+  cursor: pointer;
   }
+
+.FormItemDivider {
+  display: block;
+}
+
+
+  .FormItemTooltipContainer {
+    display: none;
+  }
+
+
   .FormButton:nth-child(1){
     display: block;
   }
@@ -410,6 +571,10 @@ h1, h2, h3, p {
   #MyInputDesktop{
     display: block;
   }
+
+.GalleryImageResults {
+    grid-template-columns: repeat(6,auto);
+}
 
 
 }
