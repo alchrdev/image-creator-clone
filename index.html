@@ -51,8 +51,9 @@
             <section class="Prompt">
               <form class="Form" action="#">
                 <div class="FormInputContainer">
-                  <input class="FormInput" type="text" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create">
-                  <div class="FormItem">
+                  <textarea id="MyTextareaMobile" class="FormInput" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create" maxlength="480""></textarea>
+                  <input id="MyInputDesktop" class="FormInput" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create" maxlength="480"">
+                  <div class="FormItem FormItem__desktop">
                     <div class="FormItemCoin">
                       <div class="FormItemCoinCircle">
                         <div class="FormItemCoinInside"></div>
@@ -63,7 +64,7 @@
                   </div>
                 </div>
                 <div class="FormButtons">
-                  <a class="FormButton">
+                  <a class="FormButton FormButton__normal">
                     <div class="FormButtonContainer">
                       <img src="./img/brush.svg" alt="">
                       <span>Create</span>
@@ -71,9 +72,19 @@
                   </a>
                   <a class="FormButton FormButton__transparent">Surprise Me</a>
                 </div>
+
+                <div class="FormItem FormItem__mobile">
+                  <div class="FormItemCoin">
+                    <div class="FormItemCoinCircle">
+                      <div class="FormItemCoinInside"></div>
+                    </div>
+                    <img class="FormItemCoinIcon" src="./img/thunder.svg" alt="">
+                  </div>
+                  <p class="FormItemCoinNumber">15</p>
+                </div>
               </form>
             </section>
-        </div>
+        </div> 
       </main> 
   </body>
 </html>

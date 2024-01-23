@@ -140,6 +140,10 @@ h1, h2, h3, p {
 
 .Prompt {
   padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .Form {
@@ -149,16 +153,19 @@ h1, h2, h3, p {
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  flex-grow: 1;
 }
 
 .FormInputContainer {
   background-color: var(--clr-gray-700);
   display: flex;
   justify-content: space-between;
-  border-radius: 5rem;
+  border-radius: 1.5rem;
   padding-block: .55rem;
   padding-inline-end: 1rem;
   width: 100%;
+  height: 134px;
+  flex-grow: 1;
 }
 
 .FormInput {
@@ -171,6 +178,8 @@ h1, h2, h3, p {
   font-family: inherit;
   outline: none;
   color: var(--clr-gray-100);
+  padding: 12px 24px 12px 12px;
+  resize: none;
 }
 
 .FormInputContainer:hover {
@@ -188,6 +197,10 @@ h1, h2, h3, p {
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
   gap: .4rem;
+}
+
+.FormItem__desktop {
+  display: none;
 }
 
 .FormItemCoin {
@@ -233,16 +246,14 @@ h1, h2, h3, p {
 
 .FormButtons {
   display: flex;
-  flex: 1;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-grow: 1;
   gap: 1rem;
 }
 
 .FormButton {
   background-color: var(--clr-purple-500);
   border-radius: 5rem;
-  padding: .7rem  1.53rem;
+  padding: .7rem  1.40rem;
   color: var(--clr-gray-50);
   inline-size: max-content;
 }
@@ -251,13 +262,13 @@ h1, h2, h3, p {
 .FormButton:focus-visible{
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid var(--clr-purple-500);
   transition: border, background-color .5s;
 }
 
 .FormButton__transparent {
-  background-color: transparent;
-  border: 2px solid var(--clr-purple-500);
+  background-color: var(--clr-purple-500);
+  flex-grow: 1;
+  text-align: center;
 }
 
 .FormButton__transparent:hover,
@@ -271,6 +282,14 @@ h1, h2, h3, p {
   display: flex;
   align-items: center;
   gap: .5rem;
+}
+
+.FormButton:nth-child(1){
+  display: none;
+}
+
+#MyInputDesktop {
+  display: none;
 }
 
 @media (min-width: 768px){
@@ -328,7 +347,7 @@ h1, h2, h3, p {
   }
 
   .HeaderMenu {
-    margin-left: 10px;
+    margin-inline-start: 0.625rem;
   }
 
   .HeaderEndItemCircle {
@@ -350,13 +369,46 @@ h1, h2, h3, p {
     inline-size: 1.8rem;
   }
 
-
   .Form {
     flex-wrap:  nowrap;
   }
 
   .FormInputContainer {
     width: 80%;
+    height: 50px;
+  }
+
+  .FormInput {
+    padding: 10px;
+  }
+
+  .FormItem__mobile {
+    display: none;
+  }
+
+  .FormItem__desktop {
+    display: flex;
+  }
+  .FormButton:nth-child(1){
+    display: block;
+  }
+
+  .FormButton__normal {
+    background-color: var(--clr-purple-500);
+    border: 2px solid var(--clr-purple-500);
+  }
+
+  .FormButton__transparent {
+    background-color: transparent;
+    border: 2px solid var(--clr-purple-500);
+  }
+
+  #MyTextareaMobile {
+    display: none;
+  }
+
+  #MyInputDesktop{
+    display: block;
   }
 
 
