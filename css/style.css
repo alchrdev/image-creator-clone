@@ -55,6 +55,14 @@ h1, h2, h3, p {
   margin: 0;
 }
 
+a {
+  color: var(--clr-gray-100);
+}
+
+ul p {
+    margin-top: 10px;
+  }
+
 .Wrapper {
   padding-inline: 1.53rem;
 }
@@ -247,7 +255,16 @@ h1, h2, h3, p {
   inline-size: 1.2rem;
   border-radius: 50%;
   background: linear-gradient(var(--clr-yellow-50), var(--clr-yellow-100));
+}
 
+.FormItemCoin:before {
+  content: "";
+  block-size: 1.3rem;
+  inline-size: 1.3rem;
+  background: linear-gradient(var(--clr-yellow-100), var(--clr-yellow-50));
+  position: absolute;
+  border-radius: 50%;
+  z-index: -2;
 }
 
 .FormItemCoinCircle {
@@ -442,6 +459,10 @@ h1, h2, h3, p {
   text-overflow: ellipsis;
   padding-block: 0;
   padding-inline: 1.06rem;
+}
+
+.Faq {
+  display: none;
 }
 
 @media (min-width: 768px){
@@ -741,6 +762,108 @@ h1, h2, h3, p {
 
   .Explore {
     padding-block: 2rem;
+  }
+
+  .Faq {
+    padding-block-end: 4rem;
+    color: var(--clr-gray-50);
+    display: block;
+  }
+
+  .FaqMenu {
+    margin-top: 36px;
+    padding-inline: 2rem;
+  }
+
+  .FaqItem {
+    border-bottom: 1px solid rgba(224,205,233,.25);
+    padding: 20px 0;
+    list-style-type: none;
+  }
+
+  .FaqItem ul {
+    list-style-type: disc;
+  }
+
+  .FaqContainer {
+    display: flex;
+    line-height: 36px;
+    font-size: 28px;
+  }
+
+  .FaqItemNumber {
+    flex: 0 0 55px;
+    margin-right: 16px;
+  }
+
+  .FaqItemDesc {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    transition: padding-top 0.3s ease-out;
+    color: var(--clr-gray-100);
+  }
+
+  .FaqItemParagraph {
+    margin-bottom: 15px;
+  }
+
+
+
+  .FaqItemParagraph a {
+    color: var(--clr-gray-100);
+  }
+
+  .FaqURLContainer {
+    display: flex;
+    align-items: center;
+    gap: .8rem;  
+    padding-block-start: 1rem;
+    padding-inline: 1.9rem;
+  }
+
+  .FaqURLContainer a {
+    text-decoration: none;
+    color: var(--clr-gray-50);
+  }
+
+  .FaqURLContainer img {
+    max-width: 15px;
+  }
+
+
+  .FaqItemLi {
+    margin-top: 10px;
+  }
+
+  .FaqItemNumber:after {
+    content: "/";
+    float: right;
+  }
+
+
+  .Faq h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3.75rem;
+    color: var(--clr-gray-50);
+  }
+
+  .FaqArrowDown {
+    background-image: url("../img/faq-arrow-down.svg");
+    width: 40px;
+    height: 40px;
+    float: right;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .FaqArrowUp {
+    background-image: url("../img/faq-arrow-up.svg");
   }
 }
 
