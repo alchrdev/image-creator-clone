@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
+  --clr-gray-950: hsl(0, 0%, 7%);
   --clr-gray-900: hsl(40, 6%, 10%);
   --clr-gray-800: hsl(30, 3%, 15%);
   --clr-gray-700: hsl(0, 0%, 9%);
@@ -10,6 +11,7 @@
   --clr-gray-100: hsl(20, 2%, 75%);
   --clr-gray-50: hsl(40, 13%, 95%);
   --clr-indigo-500: hsl(225, 82%, 49%);
+  --clr-indigo-50: hsl(207, 100%, 75%);
   --clr-red-500: hsl(0, 100%, 39%);
   --clr-red-400: hsl(334 43% 55%);
   --clr-orange-500: hsl(8, 88%, 68%);
@@ -60,8 +62,8 @@ a {
 }
 
 ul p {
-    margin-top: 10px;
-  }
+  margin-top: 10px;
+}
 
 .Wrapper {
   padding-inline: 1.53rem;
@@ -465,6 +467,66 @@ ul p {
   display: none;
 }
 
+.Footer {
+  background-color: var(--clr-gray-950);
+  padding-block-start: .1rem;
+  padding-block-end: 1rem;
+  position: sticky;
+  bottom: 0;
+}
+
+.FooterItems {
+  text-align: center;
+  color: var(--clr-gray-100);
+  padding-inline: 1rem;
+}
+
+.FooterMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-inline-start: 1rem;
+  position: relative;
+}
+
+.FooterLink {
+  text-decoration: none;
+  font-size: .80rem;
+}
+
+.FooterLink:hover {
+  text-decoration: underline;
+}
+
+
+
+.FooterBtn {
+  border: 1px solid var(--clr-gray-100);
+  display: none;
+  padding-block: .2rem;
+  padding-inline: 1rem;
+  position: absolute;
+  inset-inline-end: 2rem;
+  inset-block-end: 0.225rem;
+  background-color: var(--clr-gray-800);
+}
+
+.FooterBtn img {
+  vertical-align: middle;
+  max-width: 1rem;
+  margin-inline-end: .2rem;
+}
+
+.FooterBtn a {
+  font-size: .9rem;
+  color: var(--clr-indigo-50);
+  text-decoration: none;
+}
+
+
 @media (min-width: 768px){
 
   .HeaderContainer {
@@ -867,6 +929,9 @@ ul p {
   }
 }
 
+
+
+
 @media (min-width: 875px){
 
   .Hero {
@@ -889,5 +954,21 @@ ul p {
     font-size: 1rem;
   }
 
+  .FooterBtn {
+    display: inline-block;
+  }
 
+  .Footer {
+    padding-block-end: .1rem;
+  }
+
+  .FooterMenu {
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  .Attribution {
+    display: none;
+  }
 }
