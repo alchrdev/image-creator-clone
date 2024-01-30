@@ -4,13 +4,16 @@
     <title>Image Creator from Microsoft Designer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Microsoft's Image Creator generates AI-powered images from your words. Search, chat, create in one place, and join Microsoft Rewards to earn rewards.">
+    <meta name="author" content="Alchr Dev" />
     <link href="./css/style.css" rel="stylesheet">
     <link rel="icon" href="./img/avatar.png" type="image/png">
+    <link rel="apple-touch-icon" href="./img/avatar.png" type="image/png">
   </head>
   <body>
     <div class="Wrapper">
       <main>
-        <div class="HeaderContainer">
+        <section class="HeaderContainer">
           <header class="Header">
             <div class="HeaderItem">
               <div class="HeaderStartContainer">
@@ -34,7 +37,7 @@
                   </div>
                 </div>
                 <div class="HeaderEndItem">
-                  <span>1580</span>
+                  <span>1880</span>
                   <div class="HeaderEndItemCircle">
                     <img class="fz-big" src="./img/medal.svg" alt="">
                   </div>
@@ -48,38 +51,14 @@
                 <img class="HeaderMenu" src="./img/menu.svg" alt="">
               </div>
             </div>
-            <section class="Prompt">
-              <form class="Form" action="#">
-                <div class="FormInputContainer">
-                  <textarea id="MyTextareaMobile" class="FormInput" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create" maxlength="480""></textarea>
-                  <input id="MyInputDesktop" class="FormInput" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create" maxlength="480"">
-                  <div class="FormItemDivider"></div>
-                  <div class="FormItem FormItem__desktop">
-                    <div class="FormItemCoin">
-                      <div class="FormItemCoinCircle">
-                        <div class="FormItemCoinInside"></div>
-                      </div>
-                      <img class="FormItemCoinIcon" src="./img/thunder.svg" alt="">
-                    </div>
-                    <p class="FormItemCoinNumber">15</p>
-
-                    <div class="FormItemTooltipContainer">
-                      <div class="FormItemTooltip"></div>
-                      <p>Creates images more quickly with boosst! If you run out, image generation may take longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="FormButtons">
-                  <a class="FormButton FormButton__normal">
-                    <div class="FormButtonContainer">
-                      <img src="./img/brush.svg" alt="">
-                      <span>Create</span>
-                    </div>
-                  </a>
-                  <a class="FormButton FormButton__transparent">Surprise Me</a>
-                </div>
-
-                <div class="FormItem FormItem__mobile">
+          </header>
+          <article class="Prompt">
+            <form class="Form" action="#">
+              <div class="FormInputContainer">
+                <textarea id="MyTextareaMobile" class="FormInput" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create" maxlength="480""></textarea>
+                <input id="MyInputDesktop" class="FormInput" placeholder="Want to see how Image Creator works? Select Surprise Me, then Create" maxlength="480"">
+                <div class="FormItemDivider"></div>
+                <div class="FormItem FormItem__desktop">
                   <div class="FormItemCoin">
                     <div class="FormItemCoinCircle">
                       <div class="FormItemCoinInside"></div>
@@ -87,10 +66,35 @@
                     <img class="FormItemCoinIcon" src="./img/thunder.svg" alt="">
                   </div>
                   <p class="FormItemCoinNumber">15</p>
+
+                  <div class="FormItemTooltipContainer">
+                    <div class="FormItemTooltip"></div>
+                    <p>Creates images more quickly with boosst! If you run out, image generation may take longer.</p>
+                  </div>
                 </div>
-              </form>
-            </section>
-        </div> 
+              </div>
+              <div class="FormButtons">
+                <a class="FormButton FormButton__normal">
+                  <div class="FormButtonContainer">
+                    <img src="./img/brush.svg" alt="">
+                    <span>Create</span>
+                  </div>
+                </a>
+                <a class="FormButton FormButton__transparent">Surprise Me</a>
+              </div>
+
+              <div class="FormItem FormItem__mobile">
+                <div class="FormItemCoin">
+                  <div class="FormItemCoinCircle">
+                    <div class="FormItemCoinInside"></div>
+                  </div>
+                  <img class="FormItemCoinIcon" src="./img/thunder.svg" alt="">
+                </div>
+                <p class="FormItemCoinNumber">15</p>
+              </div>
+            </form>
+          </article>
+        </section> 
         <section class="Hero">
           <div class="HeroStart">
             <h2 class="HeroStartTitle">JumpStart your creativity</h2>
@@ -104,7 +108,6 @@
                   <p class="HeroEndCardInfoTitle">Vibes / Mood</p>
                   <p class="HeroEndCardInfoDesc">Try including a time of day, a feeling, or aesthetic.</p>
                   <div class="HeroEndCardInfoButtons">
-
                     <button class="HeroEndCardInfoButton"  type="button"><img alt="plus" title="plus" src="./img/plus2.svg">golden hour</button>
                     <button class="HeroEndCardInfoButton"  type="button"><img alt="plus" title="plus" src="./img/plus2.svg">playful</button>
                   </div>
@@ -134,7 +137,6 @@
                   <p class="HeroEndCardInfoTitle">Art Styles</p>
                   <p class="HeroEndCardInfoDesc">Try an illustration style, art period or material.</p>
                   <div class="HeroEndCardInfoButtons">
-
                     <button class="HeroEndCardInfoButton"  type="button"><img alt="plus" title="plus" src="./img/plus2.svg">marble</button>
                     <button class="HeroEndCardInfoButton"  type="button"><img alt="plus" title="plus" src="./img/plus2.svg">impressionism</button>
                   </div>
@@ -397,10 +399,8 @@
           </div>
         </section>
         <section class="Faq">
-          <h2>Frequently asked questions</h2>
+          <h2 class="FaqTitle">Frequently asked questions</h2>
           <ul class="FaqMenu">
-
-
             <li class="FaqItem">
               <button class="FaqArrowDown"></button>
               <div class="FaqContainer">
@@ -432,7 +432,7 @@
 
                     <p class="FaqItemParagraph">
 
-                        Type in any text description you can think of to create a set of AI generated images and enjoy!
+                      Type in any text description you can think of to create a set of AI generated images and enjoy!
                     </p>
                   </div>
                 </div>
@@ -483,7 +483,7 @@
                       It works best when you're highly descriptive. So, get creative and add details: adjectives, locations, even artistic styles such as "digital art" or "photorealistic."
                     </p>
                     <p class="FaqItemParagraph">
-                        Here's an example of a how to create a longer, more descriptive prompt:
+                      Here's an example of a how to create a longer, more descriptive prompt:
                     </p>
                     <ul>
                       <li><em>Original prompt:</em> "astronaut"</li>
@@ -528,13 +528,13 @@
                       <li>
                         Go to your <a class="FaqURL" href="#">Bing search history</a> and select "Clear all."
                       </li>
-                      <li>
+                      <li class="FaqItemLi">
                         Go to the <a class="FaqURL" href="#">privacy dashboard</a> for your Microsoft account, scroll down to "Search history," and select "Clear search history."
                       </li>
                     </ul>
-                    <p>
-                        Either option will delete your entire (1) Bing search history, (2) Image Creator profile, and (3) Image Creator history.
-                      </p>
+                    <p class="FaqItemParagraph">
+                      Either option will delete your entire (1) Bing search history, (2) Image Creator profile, and (3) Image Creator history.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -576,7 +576,6 @@
               </div>
             </li>
           </ul>
-
           <div class="FaqURLContainer">
             <a href="https://www.bing.com/images/create/help?FORM=GENHLP" title="Learn More" target="_blank">Learn More</a>
             <img src="./img/faq-arrow-right.svg" alt="FAQ Arrow Right icon">
@@ -584,8 +583,8 @@
         </section>
       </main> 
     </div>    
-      <footer class="Footer">
-       <div class="FooterItems">
+    <footer class="Footer">
+      <div class="FooterItems">
         <ul class="FooterMenu">
           <li><a class="FooterLink" href="https://privacy.microsoft.com/en-us/privacystatement">Privacy and Cookies</a></li>
           <li><a class="FooterLink" href="https://www.bing.com/new/termsofuseimagecreator#content-policy">Content Policy</a></li>
@@ -593,13 +592,12 @@
           <li><a class="FooterLink" href="https://www.bing.com/images/create?toWww=1&redig=CEFC49B86C2D438FB8E85F18776CEA05#">Feedback</a></li>
         </ul>
         <div class="FooterBtn">
-          <img src="./img/feedback.png" alt="Feedback icon">
-          <a href="#">Feedback</a>
+          <img class="FooterBtnImg" src="./img/feedback.png" alt="Feedback icon">
+          <a class="FooterBtnURL" href="#">Feedback</a>
         </div>
         <small class="Attribution">&copy; 2024 Microsoft</small>
-
       </div>
-      </footer>
+    </footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
