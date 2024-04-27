@@ -56,5 +56,5 @@ This project was a challenge since I had previously only created small component
 
 ## 🔗 Link to the project
 
-[Visit my project here](https://alchrdev.github.io/image-creator-clone/)
+[Visit my project here](https://alchrdev.github.io/ms-designer-ui-clon/)
 
